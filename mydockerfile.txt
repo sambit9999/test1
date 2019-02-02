@@ -1,0 +1,6 @@
+FROM microsoft/dotnet:2.1-runtime
+
+WORKDIR \assignment\test1
+COPY ..
+RUN dotnet build -c Release
+ENTRYPOINT ["dotnet", "run","--no-launch-profile"]
