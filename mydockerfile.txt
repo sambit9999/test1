@@ -1,6 +1,7 @@
-FROM microsoft/dotnet:2.1-runtime
+FROM microsoft/dotnet:2.1-sdk
 
 WORKDIR \assignment\test1
 COPY ..
+RUN dotnet restore
 RUN dotnet build -c Release
 ENTRYPOINT ["dotnet", "run","--no-launch-profile"]
